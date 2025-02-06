@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airline Sentiment Analysis</title>
+  <style>
+    /* Global styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1d1d1d;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Dark theme styles */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f4b6e, #1a3c59);
+      animation: gradientAnimation 5s ease infinite;
+    }
+
+    /* Gradient animation */
+    @keyframes gradientAnimation {
+      0% { background: linear-gradient(135deg, #0f4b6e, #1a3c59); }
+      50% { background: linear-gradient(135deg, #1a3c59, #0f4b6e); }
+      100% { background: linear-gradient(135deg, #0f4b6e, #1a3c59); }
+    }
+
+    /* Button style */
+    .predict-button {
+      background-color: #005f77;
+      color: white;
+      font-size: 20px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .predict-button:hover {
+      background-color: #00788C;
+      transform: scale(1.1);
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .predict-button:active {
+      transform: scale(1.05);
+    }
+
+    /* Button animations */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.4);
+      }
+      50% {
+        box-shadow: 0px 0px 15px 10px rgba(0, 255, 255, 0.7);
+      }
+      100% {
+        box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.4);
+      }
+    }
+
+    .predict-button {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Text styles */
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Fade In animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>Airline Sentiment Analysis</h1>
+      <button class="predict-button" onclick="predictSentiment()">Predict Sentiment</button>
+    </div>
+  </div>
+
+  <script>
+    // Function for handling button click
+    function predictSentiment() {
+      alert("The sentiment prediction feature will be implemented soon!");
+    }
+  </script>
+</body>
+</html>
