@@ -27,7 +27,7 @@ def predict():
         return jsonify({"prediction":str(pred[0])})
 
 
-
+#pip install scikit-learn
 
 
 
