@@ -23,21 +23,22 @@ def predict():
         with open("model.pickle","rb") as mb_file:
             model = pickle.load(mb_file)
         pred = model.predict(dt)
+        if pred[0] == 1:
+            pred = "Positive"
+        elif pred[0] == -1:
+            pred = "Negative"
+        else:
+            pred = "Neutral"
+
         print(pred)
-        return jsonify({"prediction":str(pred[0])})
+        return render_template("result.html",prediction=pred)
+    return render_template("predict.html")
 
 
 #pip install scikit-learn
 
-
-
-
         
-    else:
-        return render_template("predict.html")
-
-
-
+   
 
 
 
